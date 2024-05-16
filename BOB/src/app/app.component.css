@@ -75,6 +75,8 @@
     height: 300px;
     width: 100%;
     background-color: rgb(13, 40, 68);
+    margin-top: 400px;
+    flex-shrink: 0;
 }
 
 .pie-icon{

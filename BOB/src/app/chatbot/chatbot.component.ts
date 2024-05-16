@@ -21,7 +21,7 @@ export class ChatbotComponent implements OnInit {
     // const x = window.top.outerWidth / 2 + window.top.screenX - (width / 2);
 
     // Asegúrate de que la ventana emergente tenga las dimensiones y características deseadas
-    window.open(chatUrl, 'Telegram Chat', 'width=500,height=500,left=550,top=170,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no');
+    window.open(chatUrl, 'Telegram Chat', 'width=500,height=500,left=440,top=170,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no');
 
 }
 

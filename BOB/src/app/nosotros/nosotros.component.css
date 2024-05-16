@@ -1,13 +1,31 @@
+body{
+    margin-bottom: -450px;
+    overflow-y: hidden;
+}
+
 .container-base{
     margin-bottom: 0%;
     z-index: 1;
     height: fit-content;
 }
 
-.contenedor-title{
+#titulo{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin-top: 5%;
+
+}
+
+#texto1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 25%;
+    font-size: 20px;
 }
 
 .contenedor-text{
@@ -15,7 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
+    max-width: 80%;
 }
 
 .contenedor{
@@ -48,13 +66,12 @@ img{
     color: white;
     background-color: rgb(13, 40, 68);
     border-radius: 7%;
-    padding: 8%;
+    padding: 10%;
 }
 
 .nombres{
-    margin-left: 10px;
+    margin-left: 5%;
     margin-bottom: 1%;
-    font-size: 25px;
 }
 
 .fotos{
@@ -77,12 +94,5 @@ img{
 }
 
 
-.texto1{
-    font-size: 20px;
-}
-
-.texto2{
-    font-size: 20px;
-}
 
 
