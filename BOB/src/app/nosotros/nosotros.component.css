@@ -1,5 +1,7 @@
 .container-base{
     margin-bottom: 0%;
+    z-index: 1;
+    height: fit-content;
 }
 
 .contenedor-title{
@@ -50,7 +52,8 @@ img{
 }
 
 .nombres{
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-bottom: 1%;
 }
 
 .fotos{
@@ -64,6 +67,14 @@ img{
     height: 100px;
     border-top-left-radius: 40%;
     border-top-right-radius: 40%;
+    margin-top: -10%;
+    z-index: 100;
 }
+
+.footer-impr{
+    margin-top: -20%;
+}
+
+
 
 
