@@ -81,9 +81,10 @@
     height: 100px;
 }
 
-p{
+a{
     color: rgba(250, 248, 244, 1);
     font-size: 18px;
+    text-decoration: none;
 }
 
 

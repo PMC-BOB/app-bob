@@ -9,47 +9,37 @@ import { filter } from 'rxjs';
   styleUrls: ['./trabajador-list.component.css']
 })
 export class TrabajadorListComponent implements OnInit {
+
   trabajadores: Array<Trabajador> = [];
-  trabajadoresFiltrados :Array<Trabajador> = [];
-  electricos : Array<Trabajador> = [];
-  electrico : Boolean = false;
-  plomeros : Array<Trabajador> = [];
-  plomero : Boolean = false;
-  maestros : Array<Trabajador> = [];
-  maestro : Boolean = false;
-  todos : Boolean = true;
+  trabajadoresFiltrados: Array<Trabajador> = [];
+  electricos: Array<Trabajador> = [];
+  electrico: boolean = false;
+  plomeros: Array<Trabajador> = [];
+  plomero: boolean = false;
+  maestros: Array<Trabajador> = [];
+  maestro: boolean = false;
+  todos: boolean = true;
   filter: string = '';
 
-  constructor(private trabajadorService:TrabajadorService , private router:Router) {
+  constructor(private trabajadorService: TrabajadorService, private router: Router) {
     this.trabajadores = this.trabajadorService.getTrabajadores();
     this.router.events.pipe(
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      // Verifica la ruta y asigna el color correspondiente
-      if (event.url === '/trabajador/list/plomeros') {
-        this.plomero = true;
-        this.plomeros = this.trabajadores.filter(t => t.nombre.toLowerCase().includes("plomero"));
-        this.todos = false;
-      } else if (event.url === '/trabajador/list/electricistas') {
-        this.electrico = true;
-        this.electricos = this.trabajadores.filter(t => t.nombre.toLowerCase().includes("electricista"));
-        this.todos = false;
-      }
-      else if (event.url === '/trabajador/list/maestros') {
-        this.maestro = true;
-        this.maestros = this.trabajadores.filter(t => t.nombre.toLowerCase().includes("maestro"));
-        this.todos = false;
-      }
+      this.handleRouteChange(event.url);
     });
   }
 
+  ngOnInit() {
+    this.getTrabajadores();
+  }
 
-  getTrabajadores(){
+  getTrabajadores() {
     this.trabajadores = this.trabajadorService.getTrabajadores();
     this.trabajadoresFiltrados = this.trabajadores;
   }
 
-  filtrarTrabajadores(){
+  filtrarTrabajadores() {
     if (this.filter) {
       this.trabajadoresFiltrados = this.trabajadores.filter(t =>
         t.nombre.toLowerCase().includes(this.filter.toLowerCase()));
@@ -58,14 +48,26 @@ export class TrabajadorListComponent implements OnInit {
     }
   }
 
+  showAdditionalInfo(index: number) {
+    this.trabajadoresFiltrados[index].showInfo = true;
+  }
 
-    
+  hideAdditionalInfo(index: number) {
+    this.trabajadoresFiltrados[index].showInfo = false;
+  }
 
-
-
-  ngOnInit() {
-    this.getTrabajadores();
-    
+  handleRouteChange(url: string) {
+    this.todos = !url.includes('/trabajador/list/');
+    if (url.includes('/trabajador/list/plomeros')) {
+      this.plomero = true;
+      this.plomeros = this.trabajadores.filter(t => t.especialidad.toLowerCase().includes("plomero"));
+    } else if (url.includes('/trabajador/list/electricistas')) {
+      this.electrico = true;
+      this.electricos = this.trabajadores.filter(t => t.especialidad.toLowerCase().includes("electricista"));
+    } else if (url.includes('/trabajador/list/maestros')) {
+      this.maestro = true;
+      this.maestros = this.trabajadores.filter(t => t.especialidad.toLowerCase().includes("maestro"));
+    }
   }
 
 }

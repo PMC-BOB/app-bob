@@ -1,5 +1,3 @@
-
-
 <div class="container-md">
   <div class="search-bar">
     <input type="text" id="searchInput" [(ngModel)]="filter" placeholder="Palabras Clave... | Dirección" aria-label="Buscar" (input)="filtrarTrabajadores()">
@@ -9,26 +7,29 @@
 
 <div class="container-md container-trabajadores">
   <div class="row" *ngIf="todos">
-    <div class="col-sm-4" *ngFor="let t of trabajadoresFiltrados">
-      <div class="card">
+    <div class="col-sm-4" *ngFor="let t of trabajadoresFiltrados; let i = index">
+      <div class="card" (mouseenter)="showAdditionalInfo(i)" (mouseleave)="hideAdditionalInfo(i)">
         <div class="card-header">
           <img src="{{t.foto}}" class="card-img-top" alt="...">
         </div>
         <div class="card-body">
           <h5 class="card-title">{{t.nombre}}</h5>
-          <p class="card-text">{{t.descripcion}}</p>
-          <div class="additional-info">
-            <div class="additional-content">
-              <h5 class="additional-title">Información Adicional</h5>
-              <p>Nombre: {{t.nombre}}</p>
-              <p>Descripcion: {{t.descripcion}}</p>
-              <p>Especialidad: {{t.especialidad}}</p>
-            </div>
-          </div>
+          <p class="card-text">{{t.especialidad}}</p>
         </div>
+      </div>
+      <div class="additional-info container" *ngIf="t.showInfo">
+          <div class="additional-content">
+            <p>{{t.nombre}}</p>
+            <p>"{{t.descripcion}}"</p>
+            <p>{{t.especialidad}}</p>
+        </div>
+      </div>
+      <div class="fondo" *ngIf="t.showInfo">
       </div>
     </div>
   </div>
+</div>
+
   <!-- plomeros -->
   <div class="row" *ngIf="plomero">
     <div class="col-sm-4" *ngFor="let t of plomeros">
@@ -39,12 +40,11 @@
         <div class="card-body">
           <h5 class="card-title">{{t.nombre}}</h5>
           <p class="card-text">{{t.descripcion}}</p>
-          <div class="additional-info">
+          <div class="additional-info container" *ngIf="t.showInfo">
             <div class="additional-content">
-              <h5 class="additional-title">Información Adicional</h5>
-              <p>Nombre: {{t.nombre}}</p>
-              <p>Descripcion: {{t.descripcion}}</p>
-              <p>Especialidad: {{t.especialidad}}</p>
+              <p>{{t.nombre}}</p>
+              <p>"{{t.descripcion}}"</p>
+              <p>{{t.especialidad}}</p>
             </div>
           </div>
         </div>
@@ -61,12 +61,11 @@
         <div class="card-body">
           <h5 class="card-title">{{t.nombre}}</h5>
           <p class="card-text">{{t.descripcion}}</p>
-          <div class="additional-info">
+          <div class="additional-info container" *ngIf="t.showInfo">
             <div class="additional-content">
-              <h5 class="additional-title">Información Adicional</h5>
-              <p>Nombre: {{t.nombre}}</p>
-              <p>Descripcion: {{t.descripcion}}</p>
-              <p>Especialidad: {{t.especialidad}}</p>
+              <p>{{t.nombre}}</p>
+              <p>"{{t.descripcion}}"</p>
+              <p>{{t.especialidad}}</p>
             </div>
           </div>
         </div>
@@ -83,16 +82,15 @@
         <div class="card-body">
           <h5 class="card-title">{{t.nombre}}</h5>
           <p class="card-text">{{t.descripcion}}</p>
-          <div class="additional-info">
+          <div class="additional-info container" *ngIf="t.showInfo">
             <div class="additional-content">
-              <h5 class="additional-title">Información Adicional</h5>
-              <p>Nombre: {{t.nombre}}</p>
-              <p>Descripcion: {{t.descripcion}}</p>
-              <p>Especialidad: {{t.especialidad}}</p>
+              <p>{{t.nombre}}</p>
+              <p>"{{t.descripcion}}"</p>
+              <p>{{t.especialidad}}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+
