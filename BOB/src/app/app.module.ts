@@ -9,6 +9,7 @@ import { ChatbotModule } from './chatbot/chatbot.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NosotrosModule } from './nosotros/nosotros.module';
+import { ContactanosModule } from './contactanos/contactanos.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NosotrosModule } from './nosotros/nosotros.module';
     TrabajadorModule,
     ChatbotModule,
     NosotrosModule,
+    ContactanosModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
