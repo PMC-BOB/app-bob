@@ -1,0 +1,123 @@
+.navbar-brand {
+    font-size: 1.5em; /* Ajusta el tamaño del texto del logo */
+    color: orange; /* Cambia el color del logo */
+}
+
+.container-fluid {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.nav-icon {
+    height: 100px;
+    max-height: 100px;
+    background-color: transparent;
+    margin-left: 12%;
+}
+
+
+.navbar-brand {
+    font-size: 1.5em; 
+    color: orange; 
+    transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #cc5500; 
+}
+
+.nav-link {
+    color: black;
+    transition: color 0.3s;
+    margin-right: 20px;
+}
+
+.nav-link:hover {
+    color: #FF6600; 
+}
+
+.btn-outline-primary {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: #FF6600; 
+    color: white; 
+}
+
+
+.btn-outline-primary {
+    background: linear-gradient(to right, #FF9900, #FF6600); 
+    color: white; 
+    padding: 10px 30px;
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    border: none; 
+    transition: background 0.3s, color 0.3s; 
+    margin-right: 15px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-primary:hover {
+    background: linear-gradient(to right, #E68500, #D45500); 
+}
+
+
+.pie-pagina{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-color: rgb(13, 40, 68);
+    margin-top: 400px;
+}
+
+.pie-icon{
+    height: 100px;
+}
+
+p{
+    color: rgba(250, 248, 244, 1);
+    font-size: 20px;
+}
+
+
+
+.linea{
+    width: 1200px;
+    border-bottom: 2px solid rgba(250, 248, 244, 1);
+    margin-left: 10%;
+    padding-top: 10%;
+}
+
+.row{
+    padding-top: 70px;
+    width: 100%;
+    background-color: rgb(13, 40, 68);
+    margin-bottom: -100px;
+}
+
+
+
+.texto{
+    width: 100%;
+    justify-items:center;
+    background-color: black;
+    z-index: 1;
+    margin-top: 100px;
+}
+
+
+
+.foto-pie{
+    margin-top: 10px;
+    position: static;
+    margin-left: 46%;
+    z-index: 100;
+}

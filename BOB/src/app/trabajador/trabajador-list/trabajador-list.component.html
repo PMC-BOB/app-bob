@@ -1,0 +1,96 @@
+<div class="container-md">
+  <div class="search-bar">
+    <input type="text" id="searchInput" [(ngModel)]="filter" placeholder="Palabras Clave... | Dirección" aria-label="Buscar" (input)="filtrarTrabajadores()">
+    <button>🔍</button>
+  </div>
+</div>
+
+<div class="container-md container-trabajadores">
+  <div class="row" *ngIf="todos">
+    <div class="col-sm-4" *ngFor="let t of trabajadoresFiltrados">
+      <div class="card">
+        <div class="card-header">
+          <img src="{{t.foto}}" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{t.nombre}}</h5>
+          <p class="card-text">{{t.descripcion}}</p>
+          <div class="additional-info">
+            <div class="additional-content">
+              <h5 class="additional-title">Información Adicional</h5>
+              <p>Nombre: {{t.nombre}}</p>
+              <p>Descripcion: {{t.descripcion}}</p>
+              <p>Especialidad: {{t.especialidad}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- plomeros -->
+  <div class="row" *ngIf="plomero">
+    <div class="col-sm-4" *ngFor="let t of plomeros">
+      <div class="card">
+        <div class="card-header">
+          <img src="{{t.foto}}" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{t.nombre}}</h5>
+          <p class="card-text">{{t.descripcion}}</p>
+          <div class="additional-info">
+            <div class="additional-content">
+              <h5 class="additional-title">Información Adicional</h5>
+              <p>Nombre: {{t.nombre}}</p>
+              <p>Descripcion: {{t.descripcion}}</p>
+              <p>Especialidad: {{t.especialidad}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- electricistas -->
+  <div class="row" *ngIf="electrico">
+    <div class="col-sm-4" *ngFor="let t of electricos">
+      <div class="card">
+        <div class="card-header">
+          <img src="{{t.foto}}" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{t.nombre}}</h5>
+          <p class="card-text">{{t.descripcion}}</p>
+          <div class="additional-info">
+            <div class="additional-content">
+              <h5 class="additional-title">Información Adicional</h5>
+              <p>Nombre: {{t.nombre}}</p>
+              <p>Descripcion: {{t.descripcion}}</p>
+              <p>Especialidad: {{t.especialidad}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- maestro -->
+  <div class="row" *ngIf="maestro">
+    <div class="col-sm-4" *ngFor="let t of maestros">
+      <div class="card">
+        <div class="card-header">
+          <img src="{{t.foto}}" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{t.nombre}}</h5>
+          <p class="card-text">{{t.descripcion}}</p>
+          <div class="additional-info">
+            <div class="additional-content">
+              <h5 class="additional-title">Información Adicional</h5>
+              <p>Nombre: {{t.nombre}}</p>
+              <p>Descripcion: {{t.descripcion}}</p>
+              <p>Especialidad: {{t.especialidad}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

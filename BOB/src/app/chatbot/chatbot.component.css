@@ -1,0 +1,49 @@
+.boton-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    width: 30%;
+    margin: 20px auto;
+}
+
+.boton-logo {
+    width: 100%;
+    /* Ajusta el logo para que ocupe el ancho completo del contenedor */
+    margin-bottom: 20px;
+    /* Espacio entre el logo y el botón */
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-button {
+    background: linear-gradient(to right, #FF9900, #FF6600);
+    /* Gradiente de naranja */
+    border: none;
+    /* Sin bordes */
+    color: white;
+    /* Color del texto */
+    padding: 10px 30px;
+    /* Padding alrededor del texto */
+    font-size: 16px;
+    /* Tamaño del texto */
+    font-weight: bold;
+    /* Negrita para el texto */
+    border-radius: 25px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cursor como puntero */
+    display: inline-flex;
+    /* Display inline-flex para alinear ícono y texto */
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra sutil */
+    transition: background 0.3s;
+    /* Transición suave del color de fondo */
+}
+
+.custom-button:hover {
+    background: linear-gradient(to right, #E68500, #D45500);
+    /* Gradiente más oscuro al pasar el mouse */
+}

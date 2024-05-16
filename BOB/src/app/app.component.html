@@ -1,0 +1,45 @@
+<div [style.background-color]="backgroundColor">
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="" routerLink="/principal/home">
+      <img src={{icono}} alt="icono de sombrero de bob" class="nav-icon" [style.padding-right]="padding" [style.height]="tamanio">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse nav justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [style.color]="color" routerLink="/nosotros">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [style.color]="color" routerLink="/chatbot">Chatbot</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/trabajador/list" [style.color]="color">Trabajadores</a>
+        </li>
+      </ul>
+    </div>
+    
+    <button class="btn btn-outline-primary" routerLink="/contacto">Contáctanos</button>
+  </div>
+</nav>
+
+  <!-- Resto de la aplicación -->
+<router-outlet></router-outlet>
+  <div class="pie-pagina">
+        <div class="linea"></div>
+        <div class="row">
+            <div class="container1 col-lg-6 d-flex align-items-center justify-content-center" > <!-- Asegura altura para alineación vertical -->
+                <p>Contáctanos</p>
+            </div>
+            <div class="container2 col-lg-6 d-flex align-items-center justify-content-center" > <!-- Asegura altura para alineación vertical -->
+                <p>Sobre nosotros</p>
+            </div>
+        </div>
+        
+        <div class="foto-pie">
+            <img src="assets/iconos/icono-pie.png" alt="icono de sombrero de bob" class="pie-icon" routerLink="/principal/home">
+        </div>
+    </div>
+</div>
