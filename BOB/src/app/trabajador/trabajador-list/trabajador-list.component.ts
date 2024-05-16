@@ -27,7 +27,19 @@ export class TrabajadorListComponent implements OnInit {
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       this.handleRouteChange(event.url);
+      if (event.url.includes('/trabajador/list/plomeros')) {
+        this.plomero = true;
+        this.plomeros = this.trabajadores.filter(t => t.especialidad.toLowerCase().includes("plomero"));
+      } else if (event.url.includes('/trabajador/list/electricistas')) {
+        this.electrico = true;
+        this.electricos = this.trabajadores.filter(t => t.especialidad.toLowerCase().includes("electricista"));
+      } else if (event.url.includes('/trabajador/list/maestros')) {
+        this.maestro = true;
+        this.maestros = this.trabajadores.filter(t => t.especialidad.toLowerCase().includes("maestro"));
+      }
     });
+
+    
   }
 
   ngOnInit() {
@@ -57,17 +69,7 @@ export class TrabajadorListComponent implements OnInit {
   }
 
   handleRouteChange(url: string) {
-    this.todos = !url.includes('/trabajador/list/');
-    if (url.includes('/trabajador/list/plomeros')) {
-      this.plomero = true;
-      this.plomeros = this.trabajadores.filter(t => t.especialidad.toLowerCase().includes("plomero"));
-    } else if (url.includes('/trabajador/list/electricistas')) {
-      this.electrico = true;
-      this.electricos = this.trabajadores.filter(t => t.especialidad.toLowerCase().includes("electricista"));
-    } else if (url.includes('/trabajador/list/maestros')) {
-      this.maestro = true;
-      this.maestros = this.trabajadores.filter(t => t.especialidad.toLowerCase().includes("maestro"));
-    }
+    
   }
 
 }
