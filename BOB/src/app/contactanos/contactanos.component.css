@@ -1,0 +1,92 @@
+body {
+    height: 100%;
+    background-color: rgb(13, 40, 68); /* Fondo claro para una apariencia limpia y moderna */
+    margin-bottom: -380px;
+    margin-top: 4%;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    background:  rgb(13, 40, 68);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.text-content {
+    width: 60%; 
+    padding-right: 70px; /* Separación entre texto y QR */
+    margin-left: 250px;
+}
+
+.qr-container {
+    width: 40%; /* Espacio dedicado para el QR */
+    text-align: center; /* Alinea el QR en el centro del bloque */
+}
+
+.qr-container img {
+    width: 400px; /* Tamaño adecuado para el QR */
+    border: 1px solid #ccc; /* Borde suave para mejor definición */
+    padding: 5px; /* Padding para separar el QR del borde */
+    background-color: rgba(250, 248, 244, 1); /* Fondo blanco para destacar el QR */
+}
+
+p {
+    color: rgba(250, 248, 244, 1); /* Color gris oscuro para el texto para facilitar la lectura */
+    line-height: 1.5; /* Espaciado de línea para mejorar la legibilidad */
+    text-align: center;
+    font-size: 23px; /* Tamaño de fuente legible */
+}
+
+.contact-form-container {
+    max-width: 400px;   
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que padding y border no incrementen el ancho */
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: linear-gradient(to right, #FF9900, #FF6600);
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    
+}
+
+.submit-button:hover {
+    background-color: linear-gradient(to right, #E68500, #D45500);
+}
+

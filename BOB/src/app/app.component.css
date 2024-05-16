@@ -71,10 +71,12 @@
 
 
 .pie-pagina{
-    position: relative;
+    position: sticky;
     height: 300px;
     width: 100%;
     background-color: rgb(13, 40, 68);
+    margin-top: 400px;
+    flex-shrink: 0; 
 }
 
 .pie-icon{
@@ -83,18 +85,18 @@
 
 p{
     color: rgba(250, 248, 244, 1);
-    font-size: 20px;
+    font-size: 18px;
 }
 
 
 
 .linea{
     width: 1200px;
-    border-bottom: 2px solid rgba(250, 248, 244, 1);
+    border-bottom: 1px solid rgba(250, 248, 244, 1);
     margin-left: 10%;
     padding-top: 10%;
 }
-
+    
 .row{
     padding-top: 70px;
     width: 100%;
@@ -119,4 +121,9 @@ p{
     position: static;
     margin-left: 46%;
     z-index: 100;
+}
+
+.content {
+    flex: 1;
+    
 }

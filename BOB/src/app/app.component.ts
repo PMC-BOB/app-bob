@@ -27,7 +27,7 @@ export class AppComponent {
         this.color = 'black';
         this.padding = '45px';
         this.tamanio  = '100px';
-      } else if (event.url === '/trabajador/list' || event.url === '/trabajador/list/plomeros' || event.url === '/trabajador/list/electricistas' || event.url === '/trabajador/list/maestros' || event.url == '/chatbot') {
+      } else if (event.url === '/trabajador/list' || event.url === '/trabajador/list/plomeros' || event.url === '/trabajador/list/electricistas' || event.url === '/trabajador/list/maestros' || event.url == '/chatbot' || event.url == '/contacto') {
         this.backgroundColor = 'rgba(13, 40, 68, 1)';
         this.icono = 'assets/iconos/icono-pie.png';
         this.color = 'white';
