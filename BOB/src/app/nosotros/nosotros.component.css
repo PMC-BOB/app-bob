@@ -52,8 +52,9 @@ img{
 }
 
 .nombres{
-    margin-left: 5%;
+    margin-left: 10px;
     margin-bottom: 1%;
+    font-size: 25px;
 }
 
 .fotos{
